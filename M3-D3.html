@@ -180,8 +180,15 @@
             them in a cool way!
           </p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Load Images</a>
-            <a href="#" class="btn btn-secondary my-2">Load Secondary Images</a>
+            <a onclick="loadImage()" href="#" class="btn btn-primary my-2"
+              >Load Images</a
+            >
+            <a
+              onclick="loadSecondaryImage()"
+              href="#"
+              class="btn btn-secondary my-2"
+              >Load Secondary Images</a
+            >
           </p>
         </div>
       </section>
@@ -190,7 +197,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
+              <div id="card1" class="card mb-4 shadow-sm">
                 <svg
                   class="bd-placeholder-img card-img-top"
                   width="100%"
@@ -631,5 +638,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script src="/script.js"></script>
   </body>
 </html>
