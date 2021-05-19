@@ -65,7 +65,9 @@ const loadSecondaryImage = () => {
 }
 
 const hideCard = function (e) {
-  console.log(e.currentTarget.parentElement)
+  let parent =
+    e.currentTarget.parentElement.parentElement.parentElement.parentElement
+  parent.classList.add("d-none")
 }
 
 window.onload = function () {
