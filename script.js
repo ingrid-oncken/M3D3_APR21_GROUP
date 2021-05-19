@@ -3,13 +3,7 @@ const svg = document.querySelectorAll(".card > svg")
 const img = document.querySelectorAll(".card > img")
 
 const loadImage = () => {
-  fetch("http://www.splashbase.co/api/v1/images/search?query=dog", {
-    // method: "GET",
-    // headers: {
-    //   "x-rapidapi-key": "c1fd8eb80bmsh31fad838004364fp18f820jsn1e2bc6355511",
-    //   "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-    // },
-  })
+  fetch("http://www.splashbase.co/api/v1/images/search?query=dog", {})
     .then((response) => response.json())
     .then((pictures) => {
       console.log(pictures.images[0].url)
@@ -25,14 +19,6 @@ const loadImage = () => {
         card[i].prepend(imgTag)
       }
       console.log(svg)
-      // const list = document.getElementById("ingridList")
-      // for (let i = 0; i < songs.data.length; i++) {
-      //   const listElement = document.createElement("li")
-      //   listElement.className = "list-group-item"
-      //   listElement.innerText = `${songs.data[i].title}`
-      //   listElement.innerHTML = `${songs.data[i].md5_image}`
-      //   list.appendChild(listElement)
-      // }
     })
 
     .catch((err) => {
@@ -46,10 +32,8 @@ const loadSecondaryImage = () => {
     .then((pictures) => {
       console.log(pictures.images[1].url)
 
-      // console.log(card)
       for (let i = 0; i < card.length; i++) {
         svg[i].remove()
-        // img[i].remove()
 
         const imgTag = document.createElement("img")
         imgTag.classList.add("card-img-top")
@@ -78,4 +62,6 @@ window.onload = function () {
     element.addEventListener("click", hideCard)
   })
 }
-// card[0].classList.add("d-none")
+
+const nineMin = document.querySelector(".card-body small")
+nineMin.innerText = pictures.images[0].id
