@@ -3,7 +3,7 @@ const svg = document.querySelectorAll(".card > svg")
 const img = document.querySelectorAll(".card > img")
 
 const loadImage = () => {
-  fetch("http://www.splashbase.co/api/v1/images/search?query=dog", {})
+  fetch("http://www.splashbase.co/api/v1/images/search?query=people", {})
     .then((response) => response.json())
     .then((pictures) => {
       console.log(pictures.images[0].url)
@@ -27,7 +27,7 @@ const loadImage = () => {
 }
 
 const loadSecondaryImage = () => {
-  fetch("http://www.splashbase.co/api/v1/images/search?query=dog", {})
+  fetch("http://www.splashbase.co/api/v1/images/search?query=sea", {})
     .then((response) => response.json())
     .then((pictures) => {
       console.log(pictures.images[1].url)
